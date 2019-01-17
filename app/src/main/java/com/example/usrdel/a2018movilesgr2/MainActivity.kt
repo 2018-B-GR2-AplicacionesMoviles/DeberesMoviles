@@ -52,6 +52,9 @@ class MainActivity : AppCompatActivity() {
                 .setOnClickListener {
                     this.irActividadFragmentos()
                 }
+        btnHttp.setOnClickListener {
+            irHttpActivity()
+        }
     }
 
     fun irActividadFragmentos() {
@@ -119,6 +122,11 @@ class MainActivity : AppCompatActivity() {
     fun irAPantallaDeIntentRespuesta() {
         // INTENT
         val intentRespuesta = Intent(this, IntentRespuestaActivity::class.java)
+        this.startActivity(intentRespuesta)
+    }
+    fun irHttpActivity() {
+        // INTENT
+        val intentRespuesta = Intent(this, HttpActivity::class.java)
         this.startActivity(intentRespuesta)
     }
 
